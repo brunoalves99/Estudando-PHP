@@ -1,28 +1,42 @@
 <?php
-    // Strings
-    echo "Testando texto de aspas duplas <br>";
-    echo 'Testando texto de aspas simples <br>';
-    echo "Ele disse: 'Olá' <br>";
-    echo 'Ele disse: "Olá" <br>';
 
-    $idade = 15;
+// string
+$texto = "Um texto qualquer";
 
-    echo "Ele tem $idade anos <br>";
-    echo 'Ele tem $idade anos <br>';
+// integer
+$numero = 2030;
 
-    // Checando se é string
-    $str = "Matheus";
-    $num = 12;
+//float
+$numero2 = 10.4;
 
-    if(is_string($str)) {
-        echo "$str é uma string 1 <br>";
+// boolean
+$tem = false;
+
+// array
+$arrSimples = ['notebook', 'positivo', 'preto'];
+print_r($arrSimples);
+echo "<br>";
+
+// array associativo
+$arrAssoc = [
+    'aparelho' => "smartphone",
+    'marca' => "samsung",
+    'cor' => "preto",
+    'SO' => "android",
+];
+print_r($arrAssoc);
+echo "<br>";
+
+// object
+class Aluno {
+    function estudar() {
+        echo "Estudando!";
     }
+}
 
-    if(is_string($num)) {
-        echo "$num é uma string 2 <br>";
-    }
+$bruno = new Aluno();
+$bruno->nome = "bruno";
+$bruno->idade = 22;
+echo $bruno->estudar();
 
-    if(is_string("4234")) {
-        echo "É uma string";
-    }
 ?>
